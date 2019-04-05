@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">latent</string>
+
+    <string name="biometric_title">Biometric Title</string>
+    <string name="biometric_subtitle">Biometric Subtitle</string>
+    <string name="biometric_description">Biometric Description</string>
+    <string name="biometric_cancel">Cancel</string>
+</resources>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">latent</string>
+    <string name="super_secret_passcode">Super-secret passcode:</string>
 </resources>

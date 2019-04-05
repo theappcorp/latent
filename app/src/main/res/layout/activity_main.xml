@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/super_secret_passcode"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_super_secret"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_super_secret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:padding="16dp"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <View
+        android:id="@+id/v_censor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_redacted"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_super_secret"
+        app:layout_constraintEnd_toEndOf="@+id/tv_super_secret"
+        app:layout_constraintStart_toStartOf="@+id/tv_super_secret"
+        app:layout_constraintTop_toTopOf="@+id/tv_super_secret" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        app:fab_hideAnimation="@anim/fab_scale_down"
+        app:fab_showAnimation="@anim/fab_scale_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu_colorNormal="@color/cyan"
+        app:menu_colorPressed="@color/cyan"
+        fab:menu_colorRipple="@android:color/white"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fingerprint"
+            app:fab_colorNormal="@color/pink"
+            fab:fab_colorRipple="@android:color/white"
+            fab:fab_label="Biometrics API"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fingerprint"
+            app:fab_colorNormal="@color/purple"
+            fab:fab_colorRipple="@android:color/white"
+            fab:fab_label="Fingerprint API"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pin"
+            app:fab_colorNormal="@color/orange"
+            fab:fab_colorRipple="@android:color/white"
+            fab:fab_label="Backup PIN"
+            fab:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
 
 </android.support.constraint.ConstraintLayout>
