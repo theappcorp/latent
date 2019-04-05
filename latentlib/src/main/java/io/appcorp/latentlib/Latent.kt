@@ -1,6 +1,7 @@
 package io.appcorp.latentlib
 
 import android.Manifest
+import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.pm.PackageManager
@@ -12,6 +13,12 @@ import android.support.v4.hardware.fingerprint.FingerprintManagerCompat
 
 
 class Latent {
+
+    fun displayPinPrompt(context: Context) {
+        AlertDialog.Builder(context)
+                .setView(R.layout.latent_pin_view)
+                .show()
+    }
 
     fun displayBiometricPrompt(context: Context,
                                onAuthenticationSucceeded: ((result: BiometricPrompt.AuthenticationResult?) -> Unit)? = null,
@@ -38,10 +45,10 @@ class Latent {
         }
 
         BiometricPrompt.Builder(context)
-                .setTitle(context.getString(R.string.biometric_title))
-                .setSubtitle(context.getString(R.string.biometric_subtitle))
-                .setDescription(context.getString(R.string.biometric_description))
-                .setNegativeButton(context.getString(R.string.biometric_cancel),
+                .setTitle(context.getString(R.string.latent_biometric_title))
+                .setSubtitle(context.getString(R.string.latent_biometric_subtitle))
+                .setDescription(context.getString(R.string.latent_biometric_description))
+                .setNegativeButton(context.getString(R.string.latent_biometric_cancel),
                         context.mainExecutor, DialogInterface.OnClickListener { _, _ -> onAuthenticationCancel?.invoke() })
                 .build()
                 .authenticate(cancellationSignal, context.mainExecutor, callback)

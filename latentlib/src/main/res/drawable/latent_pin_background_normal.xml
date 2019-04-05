@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@color/latent_pin_button_background_normal" />
+    <stroke
+        android:width="@dimen/latent_pin_button_stroke"
+        android:color="@color/latent_pin_button_stroke_normal" />
+
+</shape>

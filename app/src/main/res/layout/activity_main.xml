@@ -52,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu_colorNormal="@color/cyan"
         app:menu_colorPressed="@color/cyan"
+        fab:fab_label="Demo Authentication Method"
         fab:menu_colorRipple="@android:color/white"
         fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
         fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right">
@@ -60,33 +61,32 @@
             android:id="@+id/fab_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_fingerprint"
+            android:src="@mipmap/ic_fingerprint"
             app:fab_colorNormal="@color/pink"
             fab:fab_colorRipple="@android:color/white"
             fab:fab_label="Biometrics API"
-            fab:fab_size="normal" />
+            fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_fp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_fingerprint"
+            android:src="@mipmap/ic_fingerprint"
             app:fab_colorNormal="@color/purple"
             fab:fab_colorRipple="@android:color/white"
             fab:fab_label="Fingerprint API"
-            fab:fab_size="normal" />
+            fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab_pin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_pin"
+            android:src="@mipmap/ic_pin"
             app:fab_colorNormal="@color/orange"
             fab:fab_colorRipple="@android:color/white"
             fab:fab_label="Backup PIN"
-            fab:fab_size="normal" />
+            fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
-
 
 </android.support.constraint.ConstraintLayout>

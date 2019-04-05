@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="latent_pin_button_background_normal">#222</color>
+    <color name="latent_pin_button_stroke_normal">#222</color>
+    <color name="latent_pin_button_text_normal">#fff</color>
+
+    <color name="latent_pin_button_background_pressed">#fff</color>
+    <color name="latent_pin_button_stroke_pressed">#222</color>
+    <color name="latent_pin_button_text_pressed">#222</color>
+</resources>
